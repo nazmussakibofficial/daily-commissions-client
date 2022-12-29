@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 .main {
   display: flex;
   flex-direction: column;
@@ -5,6 +7,10 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+}
+
+.brandlogo {
+  font-family: 'Dancing Script', cursive;
 }
 
 .description {
@@ -143,11 +149,9 @@
   inset: 0;
   padding: 1px;
   border-radius: var(--border-radius);
-  background: linear-gradient(
-    to bottom right,
-    rgba(var(--tile-start-rgb), 1),
-    rgba(var(--tile-end-rgb), 1)
-  );
+  background: linear-gradient(to bottom right,
+      rgba(var(--tile-start-rgb), 1),
+      rgba(var(--tile-end-rgb), 1));
   background-clip: content-box;
 }
 
@@ -226,11 +230,9 @@
     border-radius: 0;
     border: none;
     border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
+    background: linear-gradient(to bottom,
+        rgba(var(--background-start-rgb), 1),
+        rgba(var(--callout-rgb), 0.5));
     background-clip: padding-box;
     backdrop-filter: blur(24px);
   }
@@ -241,11 +243,9 @@
     inset: auto 0 0;
     padding: 2rem;
     height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
+    background: linear-gradient(to bottom,
+        transparent 0%,
+        rgb(var(--background-end-rgb)) 40%);
     z-index: 1;
   }
 }
@@ -272,7 +272,89 @@
   from {
     transform: rotate(360deg);
   }
+
   to {
     transform: rotate(0deg);
+  }
+}
+
+.imgOverlay {
+  position: relative;
+}
+
+.imgOverlayImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(255, 255, 255, .5);
+}
+
+.imgOverlay:hover .overlay {
+  opacity: 1;
+}
+
+.hoverText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.loading {
+  width: 60px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loading span {
+  display: inline-block;
+  width: 25%;
+  height: '100px';
+}
+
+.loading span:nth-of-type(1) {
+  animation: anime1 1s ease-in-out infinite;
+}
+
+.loading span:nth-of-type(2) {
+  animation: anime1 1s ease-in-out .15s infinite;
+}
+
+.loading span:nth-of-type(3) {
+  animation: anime1 1s ease-in-out .3s infinite;
+}
+
+@keyframes anime1 {
+  from {
+    height: '100px';
+  }
+
+  40% {
+    height: 100%;
+  }
+
+  80% {
+    height: '100px';
+  }
+
+  to {
+    height: '100px';
   }
 }
