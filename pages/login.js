@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useContext, useState } from "react";
@@ -58,7 +57,7 @@ const login = () => {
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
                         <h1 className="text-3xl font-bold mb-5">Login to your <br /> existing account!</h1>
-                        <Image src={consumer} alt="" className='hidden lg:block max-w-sm rounded-lg shadow-2xl'></Image>
+                        <img src={consumer} alt="" className='hidden lg:block max-w-sm rounded-lg shadow-2xl'></img>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 px-5">
                         <form onSubmit={handleSubmit(handleLogin)} className="card-body">

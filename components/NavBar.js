@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { useContext } from 'react';
 import { AuthContext } from '../contexts/AuthProvider';
@@ -57,7 +56,7 @@ const NavBar = ({ darkMode, setDarkMode }) => {
                     </div>
                     <div className="avatar">
                         <div className="w-8 rounded">
-                            <Image src={logo} alt=""></Image>
+                            <img src={logo} alt=""></img>
                         </div>
                     </div>
                     <Link href='/' className={`${styles.brandlogo} btn btn-ghost normal-case text-3xl font-normal`}>Daily Commissions</Link>

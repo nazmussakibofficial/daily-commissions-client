@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import logo from '../images/brand-logo.png';
 import styles from '../styles/Home.module.css'
 
@@ -6,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="footer p-10 bg-base-200 text-base-content">
             <div>
-                <Image className='w-32' src={logo} alt=""></Image>
+                <img className='w-32' src={logo} alt=""></img>
                 <p className={`${styles.brandlogo} text-3xl`}>Daily Commissions.</p>
                 <p>A Platform To Nourish Creativity</p>
             </div>

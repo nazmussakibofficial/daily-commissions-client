@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { useContext } from 'react';
 import { AuthContext } from '../contexts/AuthProvider';
@@ -15,8 +14,8 @@ const Banner = () => {
                     <p className='hidden lg:block mb-5'>During Holidays, There are discounts on commisioning artworks.</p>
                     {user?.uid ? <></> : <Link href='/login'><button className="btn btn-secondary hidden lg:block uppercase">Log in to start commissioning</button></Link>}
                 </div>
-                <Image src={banner1} className="w-1/2 hidden lg:inline-flex" alt='' ></Image>
-                <Image src={banner1} className="w-full lg:hidden" alt=''></Image>
+                <img src={banner1} className="w-1/2 hidden lg:inline-flex" alt='' ></img>
+                <img src={banner1} className="w-full lg:hidden" alt=''></img>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide3" className="btn btn-circle">❮</a>
                     <a href="#slide2" className="btn btn-circle">❯</a>
@@ -28,8 +27,8 @@ const Banner = () => {
                     <p className='hidden lg:block mb-5'>Our aim is to provide quality arts.</p>
                     {user?.uid ? <></> : <Link href='/login'><button className="btn btn-secondary hidden lg:block uppercase">Log in to start commissioning</button></Link>}
                 </div>
-                <Image src={banner2} className="w-1/2 hidden lg:inline-flex" alt='' ></Image>
-                <Image src={banner2} className="w-full lg:hidden" alt=''></Image>
+                <img src={banner2} className="w-1/2 hidden lg:inline-flex" alt='' ></img>
+                <img src={banner2} className="w-full lg:hidden" alt=''></img>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide1" className="btn btn-circle">❮</a>
                     <a href="#slide3" className="btn btn-circle">❯</a>
@@ -41,8 +40,8 @@ const Banner = () => {
                     <p className='hidden lg:block mb-5'>Find things you'll love. Support independent sellers.</p>
                     {user?.uid ? <></> : <Link href='/login'><button className="btn btn-secondary hidden lg:block uppercase">Log in to start commissioning</button></Link>}
                 </div>
-                <Image src={banner3} className="w-1/2 hidden lg:inline-flex" alt='' ></Image>
-                <Image src={banner3} className="w-full lg:hidden" alt=''></Image>
+                <img src={banner3} className="w-1/2 hidden lg:inline-flex" alt='' ></img>
+                <img src={banner3} className="w-full lg:hidden" alt=''></img>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide2" className="btn btn-circle">❮</a>
                     <a href="#slide1" className="btn btn-circle">❯</a>
