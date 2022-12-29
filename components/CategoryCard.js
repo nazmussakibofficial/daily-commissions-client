@@ -6,7 +6,7 @@ const CategoryCard = ({ category }) => {
         <a href={`/category/${category_id}`}>
             <div className="w-48">
                 <div className={styles.imgOverlay}>
-                    <img src={img} alt="" className={styles.imgOverlayImage}></img>
+                    <img src={img.src} alt="" className={styles.imgOverlayImage}></img>
                     <div className={styles.overlay}>
                         <div className={`text-2xl text-zinc-600 ${styles.hoverText}`}>{name}</div>
                     </div>

@@ -7,7 +7,7 @@ const ArtworkCard = ({ artwork, handleAddCommission }) => {
         <div className="card w-84 bg-base-100 shadow-xl rounded-none border-secondary border-4 p-4">
             <figure>
                 <div className={`${styles.imgOverlay}`}>
-                    <img src={image} alt="" className={styles.imgOverlayImage} />
+                    <img src={image.src} alt="" className={styles.imgOverlayImage} />
                     <div className={styles.overlay}>
                         <div className={`text-2xl text-zinc-600 ${styles.hoverText}`}>{name}</div>
                     </div>
@@ -16,7 +16,7 @@ const ArtworkCard = ({ artwork, handleAddCommission }) => {
             <div className="card-body flex-row justify-center pl-0 pb-2">
                 <div className="avatar">
                     <div className="w-24 mask mask-squircle">
-                        <img src={sellerPhoto} />
+                        <img src={sellerPhoto.src} />
                     </div>
                 </div>
                 <div className='ml-5'>

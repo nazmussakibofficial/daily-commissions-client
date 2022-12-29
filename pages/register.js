@@ -84,7 +84,7 @@ const register = () => {
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
                         <h1 className="text-3xl font-bold mb-5">Register and Start!</h1>
-                        <img src={artist} alt="" className='hidden lg:block max-w-sm rounded-lg shadow-2xl'></img>
+                        <img src={artist.src} alt="" className='hidden lg:block max-w-sm rounded-lg shadow-2xl'></img>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 px-5 pb-5">
                         <form onSubmit={handleSubmit(handleSignUp)} className="card-body">

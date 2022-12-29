@@ -56,7 +56,7 @@ const NavBar = ({ darkMode, setDarkMode }) => {
                     </div>
                     <div className="avatar">
                         <div className="w-8 rounded">
-                            <img src={logo} alt=""></img>
+                            <img src={logo.src} alt=""></img>
                         </div>
                     </div>
                     <Link href='/' className={`${styles.brandlogo} btn btn-ghost normal-case text-3xl font-normal`}>Daily Commissions</Link>
