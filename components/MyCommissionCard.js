@@ -2,7 +2,7 @@ const MyCommissionCard = ({ commission }) => {
     const { name, image, category, price, isPaid, isCompleted, buyerName } = commission;
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl w-full my-5">
-            <figure><img className="w-72 h-48 ml-5" src={image.src} alt="" /></figure>
+            <figure><img className="w-72 h-48 ml-5" src={image} alt="" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{name}</h2>
                 <p className="grow-0">Price range: {price} $</p>
