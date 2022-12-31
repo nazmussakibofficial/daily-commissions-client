@@ -1,4 +1,4 @@
-const MyArtworkCard = ({ myArtwork }) => {
+const MyArtworkCard = ({ myArtwork, setDeletingProduct }) => {
     const { name, image, category, price } = myArtwork;
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl w-full">
@@ -8,8 +8,8 @@ const MyArtworkCard = ({ myArtwork }) => {
                 <p className="grow-0">Price range: {price} $</p>
                 <p className="grow-0">Category: {category}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Edit</button>
-                    <button className="btn btn-primary">Delete</button>
+                    {/* <button className="btn btn-primary uppercase">Edit</button> */}
+                    <label onClick={() => setDeletingProduct(myArtwork)} htmlFor="confirmation-modal" className="btn btn-primary uppercase">Delete</label>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 import styles from '../styles/Home.module.css'
 
-const ArtworkCard = ({ artwork, handleAddCommission }) => {
+const ArtworkCard = ({ artwork, setCommissioningProduct }) => {
     const { name, image, price, sellerName, sellerPhoto } = artwork;
 
     return (
@@ -22,7 +22,7 @@ const ArtworkCard = ({ artwork, handleAddCommission }) => {
                 <div className='ml-5'>
                     <p className="font-bold">{sellerName}</p>
                     <p>Price Range: {price}$ </p>
-                    <button onClick={() => { handleAddCommission(artwork) }} className="btn btn-outline w-full mt-2 uppercase">Commission</button>
+                    <label onClick={() => { setCommissioningProduct(artwork) }} htmlFor="confirmation-modal" className="btn btn-outline w-full mt-2 uppercase">Commission</label>
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-const MyOrderCard = ({ order }) => {
+const MyOrderCard = ({ order, setPaidProduct }) => {
     const { name, image, category, price, isPaid, isCompleted } = order;
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl w-full my-5">
@@ -9,9 +9,9 @@ const MyOrderCard = ({ order }) => {
                 <p className="grow-0">Category: <span className="capitalize">{category}</span></p>
                 <p>Status: {!isCompleted && !isPaid ? 'Pending' : ''} {isCompleted && !isPaid ? 'Completed' : ''} {isPaid && isCompleted ? 'Paid' : ''}</p>
                 <div className="card-actions justify-end">
-                    {!isCompleted && !isPaid ? <button className="btn btn-primary btn-disabled">Not Completed</button> : <></>}
-                    {isCompleted && !isPaid ? <button className="btn btn-primary">Pay</button> : <></>}
-                    {isPaid && isCompleted ? <button className="btn btn-primary btn-disabled">Paid</button> : <></>}
+                    {!isCompleted && !isPaid ? <button className="btn btn-primary btn-disabled uppercase">Not Completed</button> : <></>}
+                    {isCompleted && !isPaid ? <label onClick={() => setPaidProduct(order)} htmlFor="confirmation-modal" className="btn btn-primary uppercase">Pay</label> : <></>}
+                    {isPaid && isCompleted ? <button className="btn btn-primary btn-disabled uppercase">Paid</button> : <></>}
                 </div>
             </div>
         </div>

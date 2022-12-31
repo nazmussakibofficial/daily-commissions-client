@@ -79,7 +79,7 @@ const login = () => {
                         </form>
                         <p>New to Daily Commissions? <Link className='link link-accent' href='/register'>Create a new account</Link></p>
                         <div className="divider mt-2">OR</div>
-                        <button onClick={handleGoogleSignin} className="btn btn-outline btn-accent mb-5 mx-3">Log in with google</button>
+                        <button onClick={handleGoogleSignin} className="btn btn-outline btn-accent mb-5 mx-3 uppercase">Log in with google</button>
                     </div>
                 </div>
             </div>

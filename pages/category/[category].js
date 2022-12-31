@@ -1,8 +1,9 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { toast } from "react-hot-toast";
 import ArtworkCard from "../../components/ArtworkCard";
+import ConfirmationModal from "../../components/ConfirmationModal";
 import { AuthContext } from "../../contexts/AuthProvider";
 
 const pathCategories = [
@@ -38,6 +39,7 @@ const Category = ({ categoryArtworks }) => {
     const { category } = router.query;
     const categoryObj = pathCategories.find(path => path.category_id === category)
     const categoryName = categoryObj.name;
+    const [commissioningProduct, setCommissioningProduct] = useState(null)
 
     const handleAddCommission = data => {
         const commission = {
@@ -62,7 +64,7 @@ const Category = ({ categoryArtworks }) => {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
-                toast.success(`${data.name} is added successfully`);
+                toast.success(`${data.name} is commissioned!`);
             })
     }
 
@@ -74,9 +76,19 @@ const Category = ({ categoryArtworks }) => {
             <div className="container mx-auto p-5 my-5">
                 <h2 className="text-3xl mb-5 font-bold text-center">{categoryName} Arts</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {categoryArtworks.map(artwork => <ArtworkCard key={artwork._id} artwork={artwork} handleAddCommission={handleAddCommission}></ArtworkCard>)}
+                    {categoryArtworks.map(artwork => <ArtworkCard key={artwork._id} artwork={artwork} setCommissioningProduct={setCommissioningProduct}></ArtworkCard>)}
                 </div>
             </div>
+            {
+                commissioningProduct && <ConfirmationModal
+                    title={`Are you sure you want to commission?`}
+                    message={`after commissioning ${commissioningProduct.name}, it might take upto 7 days to complete`}
+                    successAction={handleAddCommission}
+                    successButtonName="Commission"
+                    modalData={commissioningProduct}
+                >
+                </ConfirmationModal>
+            }
         </div>
     );
 };

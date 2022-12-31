@@ -8,7 +8,7 @@ const Subscribe = () => {
                 <label className="input-group">
                     <span>Email</span>
                     <input type="text" placeholder="your@email.com" className="input input-bordered" />
-                    <button className="btn">Subscribe</button>
+                    <button className="btn uppercase">Subscribe</button>
                 </label>
             </div>
         </div>
