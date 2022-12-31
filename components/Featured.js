@@ -24,7 +24,7 @@ const Featured = () => {
     return (
         <div className="container mx-auto p-5 my-5">
             <h2 className="text-2xl mb-5 ml-5 font-semibold">Discover recent artworks</h2>
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap gap-4">
                 {recentItems.map(item => <FeaturedCard key={item._id} item={item}></FeaturedCard>)}
             </div>
         </div>
