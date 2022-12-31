@@ -32,9 +32,9 @@ const artworks = () => {
             image: data.image,
             category: data.category,
             price: data.price,
-            buyerName: user.displayName,
-            buyerEmail: user.email,
-            buyerPhoto: user.photoURL,
+            buyerName: user?.displayName,
+            buyerEmail: user?.email,
+            buyerPhoto: user?.photoURL,
             artistEmail: data.sellerEmail,
             isPaid: false,
             isCompleted: false

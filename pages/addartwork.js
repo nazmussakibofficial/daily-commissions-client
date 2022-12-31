@@ -56,9 +56,9 @@ const addartwork = () => {
                         image: imgData.data.url,
                         category: data.category,
                         price: data.price,
-                        sellerName: user.displayName,
-                        sellerEmail: user.email,
-                        sellerPhoto: user.photoURL,
+                        sellerName: user?.displayName,
+                        sellerEmail: user?.email,
+                        sellerPhoto: user?.photoURL,
                         isPaid: false,
                         isCompleted: false
                     }

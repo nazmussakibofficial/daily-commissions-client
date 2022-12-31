@@ -27,7 +27,7 @@ const login = () => {
         sigInWithGoogle()
             .then(result => {
                 const user = result.user;
-                saveUser(user.displayName, user.email, 'Consumer')
+                saveUser(user?.displayName, user?.email, 'Consumer')
             })
             .catch(e => console.error(e))
 
