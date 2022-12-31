@@ -10,9 +10,9 @@ const ConfirmationModal = ({ title, message, successAction, modalData, successBu
                         <label
                             onClick={() => successAction(modalData)}
                             htmlFor="confirmation-modal"
-                            className="btn btn-primary">{successButtonName}</label>
+                            className="btn btn-primary uppercase">{successButtonName}</label>
                         <label htmlFor="confirmation-modal"
-                            className="btn btn-primary">Cancel</label>
+                            className="btn btn-primary uppercase">Cancel</label>
 
                     </div>
                 </div>
