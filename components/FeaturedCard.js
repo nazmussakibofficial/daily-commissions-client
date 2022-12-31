@@ -6,8 +6,8 @@ const FeaturedCard = ({ item }) => {
     return (
         <div className="card bg-base-100 shadow-xl rounded-none border-secondary border-4 p-4">
             <figure>
-                <div className={`w-72 ${styles.imgOverlay}`}>
-                    <img src={image} alt="" className={styles.imgOverlayImage} />
+                <div className={`${styles.imgOverlay}`}>
+                    <img src={image} alt="" className={`h-48 ${styles.imgOverlayImage}`} />
                     <div className={styles.overlay}>
                         <div className={`text-2xl text-zinc-600 ${styles.hoverText}`}>{name}</div>
                     </div>
