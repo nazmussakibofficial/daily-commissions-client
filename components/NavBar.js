@@ -37,13 +37,13 @@ const NavBar = ({ darkMode, setDarkMode }) => {
                                 </a>
                                 <ul className="p-2 bg-base-100">
                                     {
-                                        userInfo[0]?.role === 'consumer' && <>
+                                        userInfo[0] && userInfo[0]?.role === 'consumer' && <>
                                             <li><Link href='/request'>Request a commission</Link></li>
                                             <li><Link href='/myorders'>My Orders</Link></li>
                                         </>
                                     }
                                     {
-                                        userInfo[0]?.role === 'artist' && <>
+                                        userInfo[0] && userInfo[0]?.role === 'artist' && <>
                                             <li><Link href='/addartwork'>Add Artwork</Link></li>
                                             <li><Link href='/mycommissions'>My Commissions</Link></li>
                                             <li><Link href='/myartworks'>My Artworks</Link></li>
@@ -81,13 +81,13 @@ const NavBar = ({ darkMode, setDarkMode }) => {
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             {
-                                userInfo[0].role === 'Consumer' && <>
+                                userInfo[0] && userInfo[0].role === 'Consumer' && <>
                                     <li><Link href='/request'>Request a commission</Link></li>
                                     <li><Link href='/myorders'>My Orders</Link></li>
                                 </>
                             }
                             {
-                                userInfo[0].role === 'Artist' && <>
+                                userInfo[0] && userInfo[0].role === 'Artist' && <>
                                     <li><Link href='/addartwork'>Add Artwork</Link></li>
                                     <li><Link href='/mycommissions'>My Commissions</Link></li>
                                     <li><Link href='/myartworks'>My Artworks</Link></li>
