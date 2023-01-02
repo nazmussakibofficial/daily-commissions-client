@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Daily Commissions Project
 
-## Getting Started
+## Deployment
 
-First, run the development server:
+[Live site](https://daily-commissions.onrender.com/)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Frameworks/libraries used:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### `Next, react, firebase, tailwind, daisyUI, react hot toast, react hook form, tanstack query, react fontawesome`
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+This project features:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Note: the profile options(dashboard, logout) can be accessed after you click on the profile picture
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### `SPA(Single Page Application) built with nextjs's file routing system, which enables smoother load time`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### `includes Firebase Auth which ensures user's privacy`
 
-## Learn More
+### `includes theme toggler which can switch between light and dark mode`
 
-To learn more about Next.js, take a look at the following resources:
+### `Elegant layout`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### `includes toast notifications`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### `includes dynamic title for different pages using head component from nextjs`
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
