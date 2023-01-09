@@ -49,7 +49,7 @@ const AuthProvider = ({ children }) => {
         queryKey: ['userInfo', user?.email],
         queryFn: async () => {
             try {
-                const res = await fetch(`https://daily-commissions-server.vercel.app/user?email=${user?.email}`);
+                const res = await fetch(`https://daily-commissions-server.vercel.app/users?email=${user?.email}`);
                 const data = await res.json();
                 return data;
             }

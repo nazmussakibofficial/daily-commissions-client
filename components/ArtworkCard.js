@@ -1,6 +1,9 @@
+import { useContext } from 'react';
+import { AuthContext } from '../contexts/AuthProvider';
 import styles from '../styles/Home.module.css'
 
 const ArtworkCard = ({ artwork, setCommissioningProduct }) => {
+    const { user } = useContext(AuthContext);
     const { name, image, price, sellerName, sellerPhoto } = artwork;
 
     return (
@@ -22,7 +25,12 @@ const ArtworkCard = ({ artwork, setCommissioningProduct }) => {
                 <div className='ml-5'>
                     <p className="font-bold">{sellerName}</p>
                     <p>Price Range: {price}$ </p>
-                    <label onClick={() => { setCommissioningProduct(artwork) }} htmlFor="confirmation-modal" className="btn btn-outline w-full mt-2 uppercase">Commission</label>
+                    {
+                        user?.uid ?
+                            <label onClick={() => { setCommissioningProduct(artwork) }} htmlFor="confirmation-modal" className="btn btn-outline w-full mt-2 uppercase">Commission</label>
+                            :
+                            <button className="btn uppercase" disabled>Log in to commission</button>
+                    }
                 </div>
             </div>
         </div>
